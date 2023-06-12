@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -26,6 +28,8 @@ public class Jogo implements Serializable{
 	private Long codigo;
 	private String nome;
     private String descricao;
+    @Enumerated(EnumType.STRING)
+    private Status status = Status.ATIVO;
     @ManyToMany
     @JoinTable(name = "jogo_plataforma", joinColumns = @JoinColumn(name = "codigo_jogo"), inverseJoinColumns = @JoinColumn(name = "codigo_plataforma"))
     private List<Plataforma> plataformas = new ArrayList<>();
@@ -57,6 +61,14 @@ public class Jogo implements Serializable{
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public List<Plataforma> getPlataformas() {
@@ -105,7 +117,5 @@ public class Jogo implements Serializable{
         return "Jogo [codigo=" + codigo + ", nome=" + nome + ", descricao=" + descricao + ", plataformas=" + plataformas
                 + "]";
     }
-
-    
     
 }
