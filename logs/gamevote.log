@@ -33,3 +33,38 @@
 2023-06-14T15:10:34.908-03:00  INFO 27836 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-06-14T15:10:34.909-03:00  INFO 27836 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2023-06-14T15:10:34.934-03:00  INFO 27836 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 25 ms
+2023-06-14T15:24:48.958-03:00  INFO 11292 --- [restartedMain] w.g.Application                          : Starting Application using Java 17.0.7 with PID 11292 (C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo\target\classes started by jeanc in C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo)
+2023-06-14T15:24:48.975-03:00  INFO 11292 --- [restartedMain] w.g.Application                          : No active profile set, falling back to 1 default profile: "default"
+2023-06-14T15:24:49.414-03:00  INFO 11292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-14T15:24:49.415-03:00  INFO 11292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-14T15:24:51.076-03:00  INFO 11292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14T15:24:51.194-03:00  INFO 11292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 5 JPA repository interfaces.
+2023-06-14T15:24:52.243-03:00  INFO 11292 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-06-14T15:24:52.260-03:00  INFO 11292 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-06-14T15:24:52.261-03:00  INFO 11292 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-06-14T15:24:52.426-03:00  INFO 11292 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-06-14T15:24:52.426-03:00  INFO 11292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3011 ms
+2023-06-14T15:24:52.940-03:00  INFO 11292 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.5.1 by Redgate
+2023-06-14T15:24:52.940-03:00  INFO 11292 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-06-14T15:24:52.940-03:00  INFO 11292 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : 
+2023-06-14T15:24:52.974-03:00  INFO 11292 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2023-06-14T15:24:53.256-03:00  INFO 11292 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2174b387
+2023-06-14T15:24:53.258-03:00  INFO 11292 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2023-06-14T15:24:53.294-03:00  INFO 11292 --- [restartedMain] o.f.c.i.d.b.BaseDatabaseType             : Database: jdbc:postgresql://localhost:5432/gamevote (PostgreSQL 15.1)
+2023-06-14T15:24:53.383-03:00  INFO 11292 --- [restartedMain] o.f.c.i.c.DbValidate                     : Successfully validated 3 migrations (execution time 00:00.044s)
+2023-06-14T15:24:53.550-03:00  INFO 11292 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 03
+2023-06-14T15:24:53.551-03:00  INFO 11292 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+2023-06-14T15:24:53.753-03:00  INFO 11292 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14T15:24:53.877-03:00  INFO 11292 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-14T15:24:54.146-03:00  WARN 11292 --- [restartedMain] o.h.o.deprecation                        : HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-06-14T15:24:54.469-03:00  INFO 11292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-14T15:24:56.091-03:00  INFO 11292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14T15:24:56.109-03:00  INFO 11292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14T15:25:00.226-03:00  INFO 11292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-14T15:25:03.002-03:00  INFO 11292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-14T15:25:03.017-03:00  INFO 11292 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-14T15:25:03.148-03:00  INFO 11292 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-14T15:25:03.164-03:00  INFO 11292 --- [restartedMain] w.g.Application                          : Started Application in 14.943 seconds (process running for 16.275)
+2023-06-14T15:25:05.329-03:00  INFO 11292 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-14T15:25:05.330-03:00  INFO 11292 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-14T15:25:05.331-03:00  INFO 11292 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
