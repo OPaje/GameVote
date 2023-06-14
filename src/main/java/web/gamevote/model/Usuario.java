@@ -8,6 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -28,6 +30,8 @@ public class Usuario implements Serializable {
 	private String nomeUsuario;
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
+	@OneToOne
+	@JoinColumn(name = "codigo_papel")
 	private Papel papel;
 	public Long getCodigo() {
 		return codigo;
