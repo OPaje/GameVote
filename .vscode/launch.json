@@ -29,6 +29,16 @@
             "projectName": "controlevacinacao",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<gamevote>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "web.gamevote.Application",
+            "projectName": "gamevote",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
