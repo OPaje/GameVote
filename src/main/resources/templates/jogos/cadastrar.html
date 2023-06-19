@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR" layout:decorate="~{layout/layoutpadrao}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.thymeleaf.org">
+<html lang="pt-BR" layout:decorate="~{layout/layoutpadrao}" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-<!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-<!-- JavaScript (opcional, dependendo do uso) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+	<!-- JavaScript (opcional, dependendo do uso) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-<title>Cadastrar Jogo</title>
+	<title>Cadastrar Jogo</title>
+	<th:import class="" />
+
+
 </head>
+
 <body>
 	<div layout:fragment="conteudo">
 
@@ -20,16 +26,25 @@
 		<!-- conteudo principal -->
 		<main class="mt-5 p-4 pt-5">
 			<div class="container-fluid">
-					
+
 				<form th:action="@{/jogos/cadastrar}" method="POST">
 					<input type="hidden" th:field="${jogo.codigo}">
-                    <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" th:field="${jogo.nome}" class="form-control">
-                    <label for="descricao" class="form-label mt-3">Descrição:</label>
-                    <input type="text" th:field="${jogo.descricao}" class="form-control">
+					<label for="nome" class="form-label">Nome:</label>
+					<input type="text" th:field="${jogo.nome}" class="form-control">
+					<label for="descricao" class="form-label mt-3">Descrição:</label>
+					<input type="text" th:field="${jogo.descricao}" class="form-control">
 
-                    <input type="submit" value="Cadastrar" class="btn btn-primary mt-3">
-                </form>
+					<div class="form-group">
+						<label for="plataformas">Plataformas:</label>
+						<div class="form-check" th:each="plataforma : ${plataformas}">
+							<input type="checkbox" th:checked="${jogo.plataformas.contains(plataforma)}"
+								   th:value="${plataforma.codigo}" name="plataformas" class="form-check-input" />
+							<label class="form-check-label" th:text="${plataforma.nome}"></label>
+						</div>
+					</div>
+
+					<input type="submit" value="Cadastrar" class="btn btn-primary mt-3">
+				</form>
 
 				<div th:if="${notificacao != null}" th:object="${notificacao}">
 					<input type="hidden" id="mensagem" th:value="*{mensagem}">
@@ -44,4 +59,5 @@
 	</div>
 
 </body>
+
 </html>

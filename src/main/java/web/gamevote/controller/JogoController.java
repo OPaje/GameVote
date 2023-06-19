@@ -1,6 +1,8 @@
 package web.gamevote.controller;
 
 import java.util.Optional;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,27 +22,39 @@ import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.PostMapping;
 
-
+import web.gamevote.model.Plataforma;
 import web.gamevote.model.Jogo;
 import web.gamevote.model.Status;
 import web.gamevote.model.filter.JogoFilter;
 import web.gamevote.pagination.PageWrapper;
 import web.gamevote.repository.JogoRepository;
+import web.gamevote.repository.PlataformaRepository;
 
 @Controller
 @RequestMapping("/jogos")
 public class JogoController {
-
+ @Autowired
+ private PlataformaRepository plataformaRepository; 
  @Autowired
  private JogoRepository jogoRepository; 
 
  @GetMapping("/cadastrar")
- public String abrirCadastro(Jogo jogo){
-   return "jogos/cadastrar";
+ public String abrirCadastro(Model model){
+    List<Plataforma> plataformas = plataformaRepository.findAll();
+    model.addAttribute("plataformas", plataformas);
+    Jogo jogo = new Jogo();
+
+    jogo.setPlataformas(new ArrayList<>()); // Inicializa a lista de plataformas vazia
+    model.addAttribute("jogo", jogo);
+
+   return "jogos/cadastrar"; 
  }
 
  @PostMapping("/cadastrar")
  public String cadastrar(Jogo jogo){
+
+    System.out.println("=>" + jogo.getPlataformas());
+
     jogoRepository.save(jogo);
     return "redirect:/jogos/mostrarmensagemcadastrook";
  }
