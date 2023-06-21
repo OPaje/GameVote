@@ -7,10 +7,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import jakarta.validation.Valid;
 import web.gamevote.ajax.NotificacaoAlertify;
 import web.gamevote.ajax.TipoNotificaoAlertify;
 import web.gamevote.model.Papel;
@@ -40,10 +43,24 @@ public class UsuarioController {
     }
 
     @PostMapping("/cadastrar")
-    public String cadastrar(Usuario usuario){
+    public String cadastrar(@Valid Usuario usuario, BindingResult resultado, Model model){
 
-        cadastroUsuarioService.salvar(usuario);
-        return "redirect:/usuarios/cadastrosucesso";
+        if(resultado.hasErrors()){
+            logger.info("O usuario recebido para cadastrar não é válido.");
+			logger.info("Erros encontrados:");
+			for (FieldError erro : resultado.getFieldErrors()) {
+				logger.info("{}", erro);
+			}
+
+            List<Papel>papeis = papelRepository.findAll();
+            model.addAttribute("todosPapeis", papeis);
+            return "usuario/cadastrar";
+        }else{
+
+            cadastroUsuarioService.salvar(usuario);
+            return "redirect:/usuarios/cadastrosucesso";
+        }
+
     }
 
     @GetMapping("/cadastrosucesso")

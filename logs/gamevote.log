@@ -21135,3 +21135,391 @@ org.springframework.beans.NotReadablePropertyException: Invalid property 'papeis
 2023-06-20T20:05:37.271-03:00  INFO 19092 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-06-20T20:05:37.271-03:00  INFO 19092 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2023-06-20T20:05:37.273-03:00  INFO 19092 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2023-06-20T21:26:21.052-03:00  INFO 2468 --- [restartedMain] w.g.Application                          : Starting Application using Java 17.0.7 with PID 2468 (C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo\target\classes started by jeanc in C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo)
+2023-06-20T21:26:21.069-03:00  INFO 2468 --- [restartedMain] w.g.Application                          : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T21:26:21.458-03:00  INFO 2468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-20T21:26:21.458-03:00  INFO 2468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-20T21:26:23.065-03:00  INFO 2468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T21:26:23.195-03:00  INFO 2468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2023-06-20T21:26:24.442-03:00  INFO 2468 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-06-20T21:26:24.457-03:00  INFO 2468 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-06-20T21:26:24.457-03:00  INFO 2468 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-06-20T21:26:24.600-03:00  INFO 2468 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-06-20T21:26:24.601-03:00  INFO 2468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3141 ms
+2023-06-20T21:26:25.137-03:00  INFO 2468 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.5.1 by Redgate
+2023-06-20T21:26:25.137-03:00  INFO 2468 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-06-20T21:26:25.137-03:00  INFO 2468 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : 
+2023-06-20T21:26:25.165-03:00  INFO 2468 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2023-06-20T21:26:25.524-03:00  INFO 2468 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@424579e1
+2023-06-20T21:26:25.528-03:00  INFO 2468 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2023-06-20T21:26:25.558-03:00  INFO 2468 --- [restartedMain] o.f.c.i.d.b.BaseDatabaseType             : Database: jdbc:postgresql://localhost:5432/gamevote (PostgreSQL 15.1)
+2023-06-20T21:26:25.656-03:00  INFO 2468 --- [restartedMain] o.f.c.i.c.DbValidate                     : Successfully validated 3 migrations (execution time 00:00.049s)
+2023-06-20T21:26:25.715-03:00  INFO 2468 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 03
+2023-06-20T21:26:25.717-03:00  INFO 2468 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+2023-06-20T21:26:25.876-03:00  INFO 2468 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T21:26:25.987-03:00  INFO 2468 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-20T21:26:26.229-03:00  WARN 2468 --- [restartedMain] o.h.o.deprecation                        : HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-06-20T21:26:26.510-03:00  INFO 2468 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-20T21:26:27.656-03:00  INFO 2468 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T21:26:27.674-03:00  INFO 2468 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T21:26:28.849-03:00  INFO 2468 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-20T21:26:29.640-03:00  INFO 2468 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T21:26:29.641-03:00  INFO 2468 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-20T21:26:29.661-03:00  INFO 2468 --- [RMI TCP Connection(1)-127.0.0.1] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T21:26:29.679-03:00  INFO 2468 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 38 ms
+2023-06-20T21:26:29.692-03:00  INFO 2468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-20T21:26:29.810-03:00  INFO 2468 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-20T21:26:29.830-03:00  INFO 2468 --- [restartedMain] w.g.Application                          : Started Application in 9.619 seconds (process running for 11.173)
+2023-06-20T21:26:55.148-03:00 ERROR 2468 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Size' validating type 'web.gamevote.model.Papel'. Check configuration for 'papel'] with root cause
+
+jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Size' validating type 'web.gamevote.model.Papel'. Check configuration for 'papel'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-3.0.5.jar:3.0.5]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:932) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:398) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:175) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+
+2023-06-20T21:26:55.157-03:00 ERROR 2468 --- [http-nio-8080-exec-4] w.g.c.ErrosController                    : Ocorreu um erro interno no servidor.
+2023-06-20T21:27:08.574-03:00 ERROR 2468 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Size' validating type 'web.gamevote.model.Papel'. Check configuration for 'papel'] with root cause
+
+jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Size' validating type 'web.gamevote.model.Papel'. Check configuration for 'papel'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-3.0.5.jar:3.0.5]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:932) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:398) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:175) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+
+2023-06-20T21:27:08.577-03:00 ERROR 2468 --- [http-nio-8080-exec-7] w.g.c.ErrosController                    : Ocorreu um erro interno no servidor.
+2023-06-20T21:28:38.333-03:00  INFO 40564 --- [restartedMain] w.g.Application                          : Starting Application using Java 17.0.7 with PID 40564 (C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo\target\classes started by jeanc in C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo)
+2023-06-20T21:28:38.351-03:00  INFO 40564 --- [restartedMain] w.g.Application                          : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T21:28:38.763-03:00  INFO 40564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-20T21:28:38.764-03:00  INFO 40564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-20T21:28:40.463-03:00  INFO 40564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T21:28:40.613-03:00  INFO 40564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 5 JPA repository interfaces.
+2023-06-20T21:28:42.478-03:00  INFO 40564 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-06-20T21:28:42.496-03:00  INFO 40564 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-06-20T21:28:42.496-03:00  INFO 40564 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-06-20T21:28:42.643-03:00  INFO 40564 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-06-20T21:28:42.643-03:00  INFO 40564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3879 ms
+2023-06-20T21:28:43.132-03:00  INFO 40564 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.5.1 by Redgate
+2023-06-20T21:28:43.132-03:00  INFO 40564 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-06-20T21:28:43.132-03:00  INFO 40564 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : 
+2023-06-20T21:28:43.159-03:00  INFO 40564 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2023-06-20T21:28:43.668-03:00  INFO 40564 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60f8b48f
+2023-06-20T21:28:43.671-03:00  INFO 40564 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2023-06-20T21:28:43.708-03:00  INFO 40564 --- [restartedMain] o.f.c.i.d.b.BaseDatabaseType             : Database: jdbc:postgresql://localhost:5432/gamevote (PostgreSQL 15.1)
+2023-06-20T21:28:46.451-03:00  INFO 40564 --- [restartedMain] o.f.c.i.c.DbValidate                     : Successfully validated 3 migrations (execution time 00:02.690s)
+2023-06-20T21:28:46.479-03:00  INFO 40564 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 03
+2023-06-20T21:28:46.480-03:00  INFO 40564 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+2023-06-20T21:28:46.799-03:00  INFO 40564 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T21:28:47.014-03:00  INFO 40564 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-20T21:28:47.316-03:00  WARN 40564 --- [restartedMain] o.h.o.deprecation                        : HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-06-20T21:28:47.631-03:00  INFO 40564 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-20T21:28:48.951-03:00  INFO 40564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T21:28:48.971-03:00  INFO 40564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T21:28:50.313-03:00  INFO 40564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-20T21:28:51.342-03:00  INFO 40564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-20T21:28:51.359-03:00  INFO 40564 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T21:28:51.544-03:00  INFO 40564 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-20T21:28:51.670-03:00  INFO 40564 --- [restartedMain] w.g.Application                          : Started Application in 14.283 seconds (process running for 15.788)
+2023-06-20T21:28:54.553-03:00  INFO 40564 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T21:28:54.553-03:00  INFO 40564 --- [RMI TCP Connection(2)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-20T21:28:54.556-03:00  INFO 40564 --- [RMI TCP Connection(2)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2023-06-20T21:29:43.182-03:00 ERROR 40564 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Size' validating type 'web.gamevote.model.Papel'. Check configuration for 'papel'] with root cause
+
+jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Size' validating type 'web.gamevote.model.Papel'. Check configuration for 'papel'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-8.0.0.Final.jar:8.0.0.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:104) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-3.0.5.jar:3.0.5]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:932) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:398) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:175) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+
+2023-06-20T21:29:43.192-03:00 ERROR 40564 --- [http-nio-8080-exec-10] w.g.c.ErrosController                    : Ocorreu um erro interno no servidor.
+2023-06-20T21:30:47.709-03:00  INFO 40564 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-20T21:30:48.192-03:00  INFO 40564 --- [Thread-5] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2023-06-20T21:30:48.223-03:00  INFO 40564 --- [Thread-5] o.a.c.c.C.[.[.[/]                        : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-20T21:30:48.560-03:00  INFO 40564 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T21:30:48.683-03:00  INFO 40564 --- [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2023-06-20T21:30:48.775-03:00  INFO 40564 --- [Thread-5] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2023-06-20T21:30:49.909-03:00  INFO 40564 --- [restartedMain] w.g.Application                          : Starting Application using Java 17.0.7 with PID 40564 (C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo\target\classes started by jeanc in C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo)
+2023-06-20T21:30:49.912-03:00  INFO 40564 --- [restartedMain] w.g.Application                          : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T21:30:50.966-03:00  INFO 40564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T21:30:50.995-03:00  INFO 40564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 5 JPA repository interfaces.
+2023-06-20T21:30:51.199-03:00  INFO 40564 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-06-20T21:30:51.201-03:00  INFO 40564 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-06-20T21:30:51.201-03:00  INFO 40564 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-06-20T21:30:51.229-03:00  INFO 40564 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-06-20T21:30:51.229-03:00  INFO 40564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1306 ms
+2023-06-20T21:30:51.491-03:00  INFO 40564 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2023-06-20T21:30:51.664-03:00  INFO 40564 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4cbed37d
+2023-06-20T21:30:51.665-03:00  INFO 40564 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2023-06-20T21:30:51.678-03:00  INFO 40564 --- [restartedMain] o.f.c.i.d.b.BaseDatabaseType             : Database: jdbc:postgresql://localhost:5432/gamevote (PostgreSQL 15.1)
+2023-06-20T21:30:51.724-03:00  INFO 40564 --- [restartedMain] o.f.c.i.c.DbValidate                     : Successfully validated 3 migrations (execution time 00:00.018s)
+2023-06-20T21:30:51.792-03:00  INFO 40564 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 03
+2023-06-20T21:30:51.793-03:00  INFO 40564 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+2023-06-20T21:30:51.863-03:00  INFO 40564 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T21:30:51.867-03:00  WARN 40564 --- [restartedMain] o.h.o.deprecation                        : HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-06-20T21:30:51.895-03:00  INFO 40564 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-20T21:30:52.012-03:00  INFO 40564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T21:30:52.013-03:00  INFO 40564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T21:30:52.543-03:00  INFO 40564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-20T21:30:52.984-03:00  INFO 40564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-20T21:30:52.993-03:00  INFO 40564 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T21:30:53.034-03:00  INFO 40564 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-20T21:30:53.044-03:00  INFO 40564 --- [restartedMain] w.g.Application                          : Started Application in 3.341 seconds (process running for 137.163)
+2023-06-20T21:30:53.049-03:00  INFO 40564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-20T21:31:01.924-03:00  INFO 40564 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T21:31:01.933-03:00  INFO 40564 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-20T21:31:01.945-03:00  INFO 40564 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 11 ms
+2023-06-20T21:31:27.379-03:00  INFO 40564 --- [http-nio-8080-exec-9] w.g.c.UsuarioController                  : O usuario recebido para cadastrar não é válido.
+2023-06-20T21:31:27.380-03:00  INFO 40564 --- [http-nio-8080-exec-9] w.g.c.UsuarioController                  : Erros encontrados:
+2023-06-20T21:31:27.382-03:00  INFO 40564 --- [http-nio-8080-exec-9] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'senha': rejected value []; codes [NotBlank.usuario.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.senha,senha]; arguments []; default message [senha]]; default message [A senha é obrigatória]
+2023-06-20T21:31:27.389-03:00  INFO 40564 --- [http-nio-8080-exec-9] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'dataNascimento': rejected value [null]; codes [NotNull.usuario.dataNascimento,NotNull.dataNascimento,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [A data de nascimento é obrigatória]
+2023-06-20T21:31:27.389-03:00  INFO 40564 --- [http-nio-8080-exec-9] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'email': rejected value []; codes [NotBlank.usuario.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.email,email]; arguments []; default message [email]]; default message [O email é obrigatório]
+2023-06-20T21:31:27.389-03:00  INFO 40564 --- [http-nio-8080-exec-9] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'nomeUsuario': rejected value []; codes [NotBlank.usuario.nomeUsuario,NotBlank.nomeUsuario,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.nomeUsuario,nomeUsuario]; arguments []; default message [nomeUsuario]]; default message [O nome de usuário é obrigatório]
+2023-06-20T21:32:07.531-03:00  INFO 40564 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : O usuario recebido para cadastrar não é válido.
+2023-06-20T21:32:07.535-03:00  INFO 40564 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Erros encontrados:
+2023-06-20T21:32:07.535-03:00  INFO 40564 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'nomeUsuario': rejected value []; codes [NotBlank.usuario.nomeUsuario,NotBlank.nomeUsuario,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.nomeUsuario,nomeUsuario]; arguments []; default message [nomeUsuario]]; default message [O nome de usuário é obrigatório]
+2023-06-20T21:32:07.535-03:00  INFO 40564 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'senha': rejected value []; codes [NotBlank.usuario.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.senha,senha]; arguments []; default message [senha]]; default message [A senha é obrigatória]
+2023-06-20T21:32:07.535-03:00  INFO 40564 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'email': rejected value []; codes [NotBlank.usuario.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.email,email]; arguments []; default message [email]]; default message [O email é obrigatório]
+2023-06-20T21:32:07.535-03:00  INFO 40564 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'dataNascimento': rejected value [null]; codes [NotNull.usuario.dataNascimento,NotNull.dataNascimento,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [A data de nascimento é obrigatória]
+2023-06-20T21:35:29.904-03:00  INFO 6900 --- [restartedMain] w.g.Application                          : Starting Application using Java 17.0.7 with PID 6900 (C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo\target\classes started by jeanc in C:\Users\jeanc\Downloads\IFTM\QuartoPeriodo\DAWN\Trabalho Final\Codigo)
+2023-06-20T21:35:29.936-03:00  INFO 6900 --- [restartedMain] w.g.Application                          : No active profile set, falling back to 1 default profile: "default"
+2023-06-20T21:35:30.464-03:00  INFO 6900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-20T21:35:30.465-03:00  INFO 6900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-20T21:35:32.130-03:00  INFO 6900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-20T21:35:32.280-03:00  INFO 6900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 5 JPA repository interfaces.
+2023-06-20T21:35:33.483-03:00  INFO 6900 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-06-20T21:35:33.498-03:00  INFO 6900 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-06-20T21:35:33.498-03:00  INFO 6900 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-06-20T21:35:33.664-03:00  INFO 6900 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-06-20T21:35:33.664-03:00  INFO 6900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3198 ms
+2023-06-20T21:35:34.472-03:00  INFO 6900 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.5.1 by Redgate
+2023-06-20T21:35:34.472-03:00  INFO 6900 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-06-20T21:35:34.472-03:00  INFO 6900 --- [restartedMain] o.f.c.i.l.VersionPrinter                 : 
+2023-06-20T21:35:34.512-03:00  INFO 6900 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2023-06-20T21:35:34.953-03:00  INFO 6900 --- [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5383c8b3
+2023-06-20T21:35:34.956-03:00  INFO 6900 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2023-06-20T21:35:34.990-03:00  INFO 6900 --- [restartedMain] o.f.c.i.d.b.BaseDatabaseType             : Database: jdbc:postgresql://localhost:5432/gamevote (PostgreSQL 15.1)
+2023-06-20T21:35:35.105-03:00  INFO 6900 --- [restartedMain] o.f.c.i.c.DbValidate                     : Successfully validated 3 migrations (execution time 00:00.061s)
+2023-06-20T21:35:35.152-03:00  INFO 6900 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 03
+2023-06-20T21:35:35.154-03:00  INFO 6900 --- [restartedMain] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+2023-06-20T21:35:35.445-03:00  INFO 6900 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-20T21:35:35.587-03:00  INFO 6900 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-20T21:35:35.828-03:00  WARN 6900 --- [restartedMain] o.h.o.deprecation                        : HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-06-20T21:35:36.116-03:00  INFO 6900 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-20T21:35:37.228-03:00  INFO 6900 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-20T21:35:37.242-03:00  INFO 6900 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-20T21:35:38.484-03:00  INFO 6900 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-20T21:35:39.292-03:00  INFO 6900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-20T21:35:39.303-03:00  INFO 6900 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-20T21:35:39.427-03:00  INFO 6900 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-20T21:35:39.443-03:00  INFO 6900 --- [restartedMain] w.g.Application                          : Started Application in 10.266 seconds (process running for 11.504)
+2023-06-20T21:35:41.549-03:00  INFO 6900 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-20T21:35:41.549-03:00  INFO 6900 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-06-20T21:35:41.550-03:00  INFO 6900 --- [RMI TCP Connection(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2023-06-20T21:36:06.284-03:00  INFO 6900 --- [http-nio-8080-exec-10] w.g.c.UsuarioController                  : O usuario recebido para cadastrar não é válido.
+2023-06-20T21:36:06.284-03:00  INFO 6900 --- [http-nio-8080-exec-10] w.g.c.UsuarioController                  : Erros encontrados:
+2023-06-20T21:36:06.286-03:00  INFO 6900 --- [http-nio-8080-exec-10] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'nomeUsuario': rejected value []; codes [NotBlank.usuario.nomeUsuario,NotBlank.nomeUsuario,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.nomeUsuario,nomeUsuario]; arguments []; default message [nomeUsuario]]; default message [O nome de usuário é obrigatório]
+2023-06-20T21:36:06.287-03:00  INFO 6900 --- [http-nio-8080-exec-10] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'email': rejected value []; codes [NotBlank.usuario.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.email,email]; arguments []; default message [email]]; default message [O email é obrigatório]
+2023-06-20T21:36:06.287-03:00  INFO 6900 --- [http-nio-8080-exec-10] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'dataNascimento': rejected value [null]; codes [NotNull.usuario.dataNascimento,NotNull.dataNascimento,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [A data de nascimento é obrigatória]
+2023-06-20T21:36:06.288-03:00  INFO 6900 --- [http-nio-8080-exec-10] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'senha': rejected value []; codes [NotBlank.usuario.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.senha,senha]; arguments []; default message [senha]]; default message [A senha é obrigatória]
+2023-06-20T21:36:38.440-03:00  INFO 6900 --- [http-nio-8080-exec-7] w.g.c.UsuarioController                  : O usuario recebido para cadastrar não é válido.
+2023-06-20T21:36:38.441-03:00  INFO 6900 --- [http-nio-8080-exec-7] w.g.c.UsuarioController                  : Erros encontrados:
+2023-06-20T21:36:38.441-03:00  INFO 6900 --- [http-nio-8080-exec-7] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'nomeUsuario': rejected value [paje]; codes [UniqueValueAttribute.usuario.nomeUsuario,UniqueValueAttribute.nomeUsuario,UniqueValueAttribute.java.lang.String,UniqueValueAttribute]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.nomeUsuario,nomeUsuario]; arguments []; default message [nomeUsuario],nomeUsuario,interface web.gamevote.service.NomeUsuarioUnicoService,]; default message [Já existe esse nome de usuário cadastrado]
+2023-06-20T21:36:38.441-03:00  INFO 6900 --- [http-nio-8080-exec-7] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'dataNascimento': rejected value [null]; codes [NotNull.usuario.dataNascimento,NotNull.dataNascimento,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [A data de nascimento é obrigatória]
+2023-06-20T21:38:18.970-03:00  INFO 6900 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : O usuario recebido para cadastrar não é válido.
+2023-06-20T21:38:18.986-03:00  INFO 6900 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Erros encontrados:
+2023-06-20T21:38:18.986-03:00  INFO 6900 --- [http-nio-8080-exec-5] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'dataNascimento': rejected value [null]; codes [NotNull.usuario.dataNascimento,NotNull.dataNascimento,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [A data de nascimento é obrigatória]
+2023-06-20T21:38:40.049-03:00  INFO 6900 --- [http-nio-8080-exec-8] w.g.c.UsuarioController                  : O usuario recebido para cadastrar não é válido.
+2023-06-20T21:38:40.049-03:00  INFO 6900 --- [http-nio-8080-exec-8] w.g.c.UsuarioController                  : Erros encontrados:
+2023-06-20T21:38:40.050-03:00  INFO 6900 --- [http-nio-8080-exec-8] w.g.c.UsuarioController                  : Field error in object 'usuario' on field 'senha': rejected value []; codes [NotBlank.usuario.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.senha,senha]; arguments []; default message [senha]]; default message [A senha é obrigatória]

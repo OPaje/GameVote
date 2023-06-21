@@ -17,36 +17,28 @@
 
 				<form th:action="@{/usuarios/cadastrar}" method="post" th:object="${usuario}">
 					<label for="nome" class="form-label mt-4">Nome:</label>
-					<!-- th:errorclass="is-invalid" -->
-					<input type="text" id="nome" th:field="*{nome}" autofocus="autofocus" class="form-control" >
-					<!-- <span class="invalid-feedback" th:if="${#fields.hasErrors('nome')}" th:each="erro : ${#fields.errors('nome')}" th:text="${erro} + '. '"></span> -->
+					<input type="text" id="nome" th:field="*{nome}" autofocus="autofocus" class="form-control" th:errorclass="is-invalid">
+					<span class="invalid-feedback" th:if="${#fields.hasErrors('nome')}" th:each="erro : ${#fields.errors('nome')}" th:text="${erro} + '. '"></span>
 					<label for="email" class="form-label mt-3">E-mail:</label>
-					<input type="email" id="email" th:field="*{email}" class="form-control" >
-					<!-- <span class="invalid-feedback" th:if="${#fields.hasErrors('email')}" th:each="erro : ${#fields.errors('email')}" th:text="${erro} + '. '"></span> -->
+					<input type="email" id="email" th:field="*{email}" class="form-control" th:errorclass="is-invalid">
+					<span class="invalid-feedback" th:if="${#fields.hasErrors('email')}" th:each="erro : ${#fields.errors('email')}" th:text="${erro} + '. '"></span>
 					<label for="senha" class="form-label mt-3">Senha:</label>
-					<input type="password" id="senha" th:field="*{senha}" class="form-control" >
-					<!-- <span class="invalid-feedback" th:if="${#fields.hasErrors('senha')}" th:each="erro : ${#fields.errors('senha')}" th:text="${erro} + '. '"></span> -->
+					<input type="password" id="senha" th:field="*{senha}" class="form-control" th:errorclass="is-invalid">
+					<span class="invalid-feedback" th:if="${#fields.hasErrors('senha')}" th:each="erro : ${#fields.errors('senha')}" th:text="${erro} + '. '"></span>
 					<label for="nomeUsuario" class="form-label mt-3">Nome de usuário:</label>
-					<input type="text" id="nomeUsuario" th:field="*{nomeUsuario}" class="form-control" >
-					<!-- <span class="invalid-feedback" th:if="${#fields.hasErrors('nomeUsuario')}" th:each="erro : ${#fields.errors('nomeUsuario')}" th:text="${erro} + '. '"></span> -->
+					<input type="text" id="nomeUsuario" th:field="*{nomeUsuario}" class="form-control" th:errorclass="is-invalid">
+					<span class="invalid-feedback" th:if="${#fields.hasErrors('nomeUsuario')}" th:each="erro : ${#fields.errors('nomeUsuario')}" th:text="${erro} + '. '"></span>
 					<label for="dataNascimento" class="form-label mt-3">Data de Nascimento:</label>
-					<input type="text" id="dataNascimento" th:field="*{dataNascimento}" class="form-control mb-4 componentedata" >
-					<!-- <span class="invalid-feedback" th:if="${#fields.hasErrors('dataNascimento')}" th:each="erro : ${#fields.errors('dataNascimento')}" th:text="${erro} + '. '"></span> -->
+					<input type="text" id="dataNascimento" th:field="*{dataNascimento}" class="form-control mb-4 componentedata" th:errorclass="is-invalid">
+					<span class="invalid-feedback" th:if="${#fields.hasErrors('dataNascimento')}" th:each="erro : ${#fields.errors('dataNascimento')}" th:text="${erro} + '. '"></span>
 					<label for="papel" class="form-label mt-3">Papel</label>
 					<select id="papel" name="papel" class="form-select" th:errorclass="is-invalid">
 						<option th:each="papel : ${todosPapeis}" th:value="${papel.codigo}" 
 						                                      th:text="${papel.nome}"
 									th:selected="${papel.codigo} == *{papel?.codigo}"></option>
 					</select>
-					<!-- <span class="invalid-feedback" th:if="${#fields.hasErrors('papeis')}" th:each="erro : ${#fields.errors('papeis')}" th:text="${erro} + '. '"></span> -->
 					<input type="submit" value="Cadastrar" class="btn btn-primary mt-4">
 				</form>
-
-                <!-- 
-                    Select ao invés do checkbox
-                    
-					<span class="invalid-feedback" th:if="${#fields.hasErrors('vacina')}"
-						th:each="erro : ${#fields.errors('vacina')}" th:text="${erro} + '. '"></span> -->
 				
 				<div th:if="${notificacao != null}" th:object="${notificacao}">
 					<input type="hidden" id="mensagem" th:value="*{mensagem}">
