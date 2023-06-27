@@ -64,6 +64,8 @@ public class JogoController {
         NotificacaoAlertify notificacaoAlertify = new NotificacaoAlertify("Jogo inserido com sucesso!");
         notificacaoAlertify.setTipo(TipoNotificaoAlertify.SUCESSO);
         notificacaoAlertify.setIntervalo(5);
+        List<Plataforma> plataformas = plataformaRepository.findAll();
+        model.addAttribute("plataformas", plataformas);
         model.addAttribute("notificacao", notificacaoAlertify);
         return "jogos/cadastrar";
     }
