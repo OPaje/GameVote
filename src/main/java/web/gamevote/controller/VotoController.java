@@ -15,11 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import web.gamevote.ajax.NotificacaoAlertify;
 import web.gamevote.ajax.TipoNotificaoAlertify;
 import web.gamevote.model.Jogo;
+import web.gamevote.model.JogosVotosDTO;
 import web.gamevote.model.Status;
 import web.gamevote.model.Usuario;
 import web.gamevote.model.Voto;
 import web.gamevote.repository.JogoRepository;
 import web.gamevote.repository.UsuarioRepository;
+import web.gamevote.repository.VotoRepository;
 import web.gamevote.service.VotoService;
 
 @Controller
@@ -71,4 +73,15 @@ public class VotoController {
 
         return "voto/cadastrar";
     }
+
+    @GetMapping("/abrirranking")
+    public String abrirRanking(Model model){
+        
+        List<JogosVotosDTO> jogos = votoService.obterQuantidadeVotosPorJogo();
+        model.addAttribute("jogos", jogos);
+
+        return "ranking/mostraranking";
+    }
+
+    
 }
