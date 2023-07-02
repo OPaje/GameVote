@@ -1,6 +1,7 @@
 package web.gamevote.controller;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -16,10 +17,12 @@ import web.gamevote.ajax.NotificacaoAlertify;
 import web.gamevote.ajax.TipoNotificaoAlertify;
 import web.gamevote.model.Jogo;
 import web.gamevote.model.JogosVotosDTO;
+import web.gamevote.model.Plataforma;
 import web.gamevote.model.Status;
 import web.gamevote.model.Usuario;
 import web.gamevote.model.Voto;
 import web.gamevote.repository.JogoRepository;
+import web.gamevote.repository.PlataformaRepository;
 import web.gamevote.repository.UsuarioRepository;
 import web.gamevote.repository.VotoRepository;
 import web.gamevote.service.VotoService;
@@ -35,6 +38,9 @@ public class VotoController {
 
     @Autowired
     private JogoRepository jogoRepository;
+
+    @Autowired
+    private PlataformaRepository plataformaRepository;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -74,13 +80,30 @@ public class VotoController {
         return "voto/cadastrar";
     }
 
-    @GetMapping("/abrirranking")
+    @GetMapping("/buscarporplataforma")
     public String abrirRanking(Model model){
-        
-        List<JogosVotosDTO> jogos = votoService.obterQuantidadeVotosPorJogo();
-        model.addAttribute("jogos", jogos);
+        /* List<Plataforma> plataformas = plataformaRepository.findAll();
+        model.addAttribute("plataformas", plataformas); */
+        return "ranking/entradaplataforma";
+    }
 
+    @PostMapping("/buscarporplataforma")
+    public String mostraRanking(String nome, Model model){
+
+        List<JogosVotosDTO> jogos = votoService.obterQuantidadeVotosPorJogo();
+        List<JogosVotosDTO> jogosComVotosPorPlataforma = new ArrayList<>();
+
+        if(!nome.isEmpty()){
+            for (JogosVotosDTO jogo : jogos) {
+                if(jogo.getPlataforma().equals(nome.toUpperCase())){
+                    jogosComVotosPorPlataforma.add(jogo);
+                }
+            }
+        }
+
+        model.addAttribute("jogos", jogosComVotosPorPlataforma);
         return "ranking/mostraranking";
+
     }
 
     

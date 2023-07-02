@@ -29,9 +29,11 @@ public class VotoService {
 
         for (Object[] resultado : listaConsulta) {
             String nome = (String) resultado[0];
-            Long quantidade = (Long) resultado[1];
+            String plataforma = (String) resultado[1];
+            Long quantidade = (Long) resultado[2];
             JogosVotosDTO dto = new JogosVotosDTO();
             dto.setNome(nome);
+            dto.setPlataforma(plataforma);
             dto.setQuantidade(quantidade);
             listaJogos.add(dto);
         }
