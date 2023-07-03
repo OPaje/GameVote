@@ -25,10 +25,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import web.gamevote.model.Plataforma;
 import web.gamevote.model.Jogo;
 import web.gamevote.model.Status;
+import web.gamevote.model.Usuario;
 import web.gamevote.model.filter.JogoFilter;
 import web.gamevote.pagination.PageWrapper;
 import web.gamevote.repository.JogoRepository;
 import web.gamevote.repository.PlataformaRepository;
+import web.gamevote.service.JogoService;
 
 @Controller
 @RequestMapping("/jogos")
@@ -37,6 +39,32 @@ public class JogoController {
  private PlataformaRepository plataformaRepository; 
  @Autowired
  private JogoRepository jogoRepository; 
+
+ @Autowired
+ private JogoService jogoService; 
+
+ 
+
+  @GetMapping("/votar")
+ public String abrirVotacao(Model model , JogoFilter filtro,
+            @PageableDefault(size = 5)
+            @SortDefault(sort = "codigo", direction = Sort.Direction.ASC) 
+            Pageable pageable,
+            HttpServletRequest request){ 
+
+        Page<Jogo> pagina = jogoRepository.filtrar(filtro, pageable);
+        PageWrapper<Jogo> paginaWrapper = new PageWrapper<>(pagina, request);
+        model.addAttribute("pagina", paginaWrapper);
+
+   return "jogos/votar"; 
+ }
+
+ @PostMapping("/votar")
+ public void votar(Jogo jogo, Usuario usuario){
+
+    jogoService.votar(jogo.getCodigo(), usuario);
+
+ }
 
  @GetMapping("/cadastrar")
  public String abrirCadastro(Model model){
@@ -64,6 +92,8 @@ public class JogoController {
         NotificacaoAlertify notificacaoAlertify = new NotificacaoAlertify("Jogo inserido com sucesso!");
         notificacaoAlertify.setTipo(TipoNotificaoAlertify.SUCESSO);
         notificacaoAlertify.setIntervalo(5);
+        List<Plataforma> plataformas = plataformaRepository.findAll();
+        model.addAttribute("plataformas", plataformas);
         model.addAttribute("notificacao", notificacaoAlertify);
         return "jogos/cadastrar";
     }

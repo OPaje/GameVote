@@ -15,9 +15,15 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import web.gamevote.service.NomeUsuarioUnicoService;
+import web.gamevote.validation.UniqueValueAttribute;
 
 @Entity
 @Table(name = "usuario")
+@UniqueValueAttribute(attribute = "nomeUsuario", service = NomeUsuarioUnicoService.class, message = "Já existe esse nome de usuário cadastrado")
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 7562368353372595992L;
@@ -26,12 +32,23 @@ public class Usuario implements Serializable {
 	@SequenceGenerator(name="gerador55", sequenceName="usuario_codigo_seq", allocationSize=1)
 	@GeneratedValue(generator="gerador55", strategy=GenerationType.SEQUENCE)
 	private Long codigo;
+
+	@NotBlank(message = "O nome é obrigatório")
 	private String nome;
+
+	@Email(message = "Email inválido")
+	@NotBlank(message = "O email é obrigatório")
 	private String email;
+
+	@NotBlank(message = "A senha é obrigatória")
 	private String senha;
+
 	@Column(name = "nome_usuario")
+	@NotBlank(message = "O nome de usuário é obrigatório")
 	private String nomeUsuario;
+
 	@Column(name = "data_nascimento")
+	@NotNull(message = "A data de nascimento é obrigatória")
 	private LocalDate dataNascimento;
 	
 	@OneToOne
@@ -40,6 +57,10 @@ public class Usuario implements Serializable {
 
 	@ManyToMany
     private List<Jogo> jogosVotados = new ArrayList<>();
+    
+	public List<Jogo> getJogosVotados(){
+        return jogosVotados;
+	}
 
 	public Long getCodigo() {
 		return codigo;

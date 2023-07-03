@@ -105,8 +105,6 @@
 			<artifactId>commons-validator</artifactId>
 			<version>1.7</version>
 		</dependency>
-
-		<!-- Adiciona as dependências de Segurança 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -120,8 +118,7 @@
 			<artifactId>bcprov-jdk15on</artifactId>
 			<version>1.70</version>
 		</dependency>
-		-->
-		<!-- Adiciona dependências para facilitar o desenvolvimento -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -136,7 +133,6 @@
 
 	<build>
 		<plugins>
-			<!-- Empacotar como uma jar executavel -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" layout:decorate="~{layout/layoutpadrao}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Ranking</title>
+</head>
+<body>
+	<div layout:fragment="conteudo">
+
+		<div th:replace="~{layout/fragments/sidebar :: sidebar(opcao='votos')}"></div>
+
+		<!-- conteudo principal -->
+		<main class="mt-5 p-4 pt-5">
+			<div class="container-fluid">
+             
+                <!-- <h1>Selecione uma plataforma:</h1>
+                <form action="#" th:action="@{/abrirranking}" method="get">
+                    <select id="plataforma" name="selectedPlataforma" th:errorclass="is-invalid">
+                        <option value="">Selecione</option>
+                        <option th:each="plataforma : ${plataformas}" th:value="${plataforma.nome}" th:text="${plataforma.nome}"></option>
+                    </select>
+                    <button type="submit">Mostrar Jogos</button>
+                </form> -->
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Jogo</th>
+                            <th>Quantidade de Votos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="jogo : ${jogos}">
+                            <td th:text="${jogo.nome}"></td>
+                            <td th:text="${jogo.quantidade}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+			</div>
+		</main>
+		<!-- !conteudo principal -->
+
+	</div>
+
+</body>
+</html>

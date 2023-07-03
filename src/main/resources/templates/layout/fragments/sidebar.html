@@ -94,7 +94,7 @@
 						<div class="collapse" id="voto" th:classappend="${opcao == 'voto'} ? show">
 							<ul class="navbar-nav ps-3">
 								<li>
-									<a th:href="@{/voto/cadastrar}" class="nav-link px-3">
+									<a th:href="@{/votos/cadastrar}" class="nav-link px-3">
 										<span class="me-2">
 											<i class="bi bi-plus-square text-white"></i>
 										</span>
@@ -102,11 +102,11 @@
 									</a>
 								</li>
 								<li>
-									<a th:href="@{/pessoas/abrirpesquisar}" class="nav-link px-3">
+									<a th:href="@{/votos/buscarporplataforma}" class="nav-link px-3">
 										<span class="me-2">
 											<i class="bi bi-search text-white"></i>
 										</span>
-										<span class="text-white">Pesquisar</span>
+										<span class="text-white">Ranking</span>
 									</a>
 								</li>
 							</ul>

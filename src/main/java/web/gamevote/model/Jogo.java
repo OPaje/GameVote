@@ -28,6 +28,7 @@ public class Jogo implements Serializable{
 	private Long codigo;
 	private String nome;
     private String descricao;
+    private Integer quantidadeVotos;
     @Enumerated(EnumType.STRING)
     private Status status = Status.ATIVO;
     @ManyToMany
@@ -90,6 +91,14 @@ public class Jogo implements Serializable{
 	public void removerPlataforma(Plataforma plataforma) {
 		plataformas.remove(plataforma);
 	}
+
+    public Integer getQuantidadeVotos(){
+        return quantidadeVotos; 
+    }
+
+     public List<Usuario> getVotos() {
+        return votos;
+    }
 
     @Override
     public int hashCode() {

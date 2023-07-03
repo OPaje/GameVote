@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR" layout:decorate="~{layout/layoutpadrao}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Página Principal</title>
+</head>
+<body>
+	<div layout:fragment="conteudo">
+
+		<div th:replace="~{layout/fragments/sidebar :: sidebar(opcao='votos')}"></div>
+
+		<!-- conteudo principal -->
+		<main class="mt-5 p-4 pt-5">
+			<div class="container-fluid">
+				<h1>Cadastro de Voto</h1>
+
+				<form th:action="@{/votos/cadastrar}" method="post" th:object="${voto}">
+					<label for="nomeUsuario" class="form-label mt-3">Nome de usuário:</label>
+					<select id="usuario" name="usuario" class="form-select" th:errorclass="is-invalid">
+						<option th:each="usuario : ${usuarios}" th:value="${usuario.codigo}" 
+						                                      th:text="${usuario.nomeUsuario}"
+									th:selected="${usuario.codigo} == *{usuario?.codigo}"></option>
+					</select>
+
+					<label for="jogo" class="form-label mt-3">Jogos</label>
+					<select id="jogo" name="jogo" class="form-select" th:errorclass="is-invalid">
+						<option th:each="jogo : ${jogos}" th:value="${jogo.codigo}" 
+						                                      th:text="${jogo.nome}"
+									th:selected="${jogo.codigo} == *{jogo?.codigo}"></option>
+					</select>
+
+					<input type="submit" value="Votar" class="btn btn-primary mt-4">
+				</form>
+				
+				<div th:if="${notificacao != null}" th:object="${notificacao}">
+					<input type="hidden" id="mensagem" th:value="*{mensagem}">
+					<input type="hidden" id="tipo" th:value="*{tipo}">
+					<input type="hidden" id="intervalo" th:value="*{intervalo}">
+				</div>
+			</div>
+		</main>
+		<!-- !conteudo principal -->
+
+	</div>
+
+	<!-- Nao usamos
+	<th:block layout:fragment="scripts">
+		<script src="../static/js/index.js" th:src="@{/js/index.js}"></script>
+	</th:block> -->
+
+</body>
+</html>
+

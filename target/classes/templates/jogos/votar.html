@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR" layout:decorate="~{layout/layoutpadrao}" xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.thymeleaf.org">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+ <title>Votação</title>
+</head>
+
+<body>
+ <div layout:fragment="conteudo">
+
+  <div th:replace="~{layout/fragments/sidebar :: sidebar(opcao='jogos')}"></div>
+
+  <!-- conteudo principal -->
+  <main class="mt-5 p-4 pt-5">
+   <div class="container-fluid">
+    <table class="table table-striped table-hover">
+      <tr>
+        <div
+          th:replace="~{layout/fragments/paginacao :: coluna(${pagina}, 'codigo', 'Código', 'w-25')}">
+        </div>
+        <div th:replace="~{layout/fragments/paginacao :: coluna(${pagina}, 'nome', 'Nome', '')}"></div>
+        <th scope="col">Descrição</th>
+        <th scope="col">Quantidade votos</th>
+      </tr>
+
+      <tr th:each="jogo : ${pagina.conteudo}">
+        <td th:text="${jogo.codigo}"></td>
+        <td th:text="${jogo.nome}"></td>
+        <td th:text="${jogo.descricao}"></td>
+        <td th:text="${jogo.quantidadeVotos != null ? jogo.quantidadeVotos : '0'}"></td>
+      </tr>
+
+    </table>
+
+   </div>
+  </main>
+
+ </div>
+
+</body>
+
+</html>

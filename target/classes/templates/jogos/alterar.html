@@ -26,6 +26,15 @@
      <input type="submit" value="Alterar" class="btn btn-primary mt-3">
     </form>
 
+    <div class="form-group">
+        <label for="plataformas">Plataformas:</label>
+        <div class="form-check" th:each="plataforma : ${plataformas}">
+            <input type="checkbox" th:checked="${jogo.plataformas.contains(plataforma)}"
+                   th:value="${plataforma.codigo}" name="plataformas" class="form-check-input" />
+            <label class="form-check-label" th:text="${plataforma.nome}"></label>
+        </div>
+    </div>
+
    </div>
   </main>
   <!-- !conteudo principal -->
