@@ -19,7 +19,9 @@ public class Plataforma implements Serializable{
 	@SequenceGenerator(name="gerador2", sequenceName="plataforma_codigo_seq", allocationSize=1)
 	@GeneratedValue(generator="gerador2", strategy=GenerationType.SEQUENCE)
 	private Long codigo;
+    
 	private String nome;
+
     public Long getCodigo() {
         return codigo;
     }

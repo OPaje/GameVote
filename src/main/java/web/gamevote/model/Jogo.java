@@ -33,6 +33,10 @@ public class Jogo implements Serializable{
     @ManyToMany
     @JoinTable(name = "jogo_plataforma", joinColumns = @JoinColumn(name = "codigo_jogo"), inverseJoinColumns = @JoinColumn(name = "codigo_plataforma"))
     private List<Plataforma> plataformas = new ArrayList<>();
+    
+    @ManyToMany
+    @JoinTable(name = "jogo_usuario", joinColumns = @JoinColumn(name = "codigo_jogo"), inverseJoinColumns = @JoinColumn(name = "codigo_usuario"))
+    private List<Usuario> votos = new ArrayList<>();
 
     
     public static long getSerialversionuid() {

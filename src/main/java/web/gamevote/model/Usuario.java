@@ -2,6 +2,8 @@ package web.gamevote.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
@@ -30,9 +33,14 @@ public class Usuario implements Serializable {
 	private String nomeUsuario;
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
+	
 	@OneToOne
 	@JoinColumn(name = "codigo_papel")
 	private Papel papel;
+
+	@ManyToMany
+    private List<Jogo> jogosVotados = new ArrayList<>();
+
 	public Long getCodigo() {
 		return codigo;
 	}
