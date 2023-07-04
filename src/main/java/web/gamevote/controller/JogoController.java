@@ -9,10 +9,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.data.web.SortDefault;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.data.domain.Sort;
 
 import web.gamevote.ajax.NotificacaoAlertify;
@@ -43,8 +45,6 @@ public class JogoController {
  @Autowired
  private JogoService jogoService; 
 
- 
-
   @GetMapping("/votar")
  public String abrirVotacao(Model model , JogoFilter filtro,
             @PageableDefault(size = 5)
@@ -59,12 +59,10 @@ public class JogoController {
    return "jogos/votar"; 
  }
 
- @PostMapping("/votar")
- public void votar(Jogo jogo, Usuario usuario){
-
-    jogoService.votar(jogo.getCodigo(), usuario);
-
- }
+  @PostMapping("/votar")
+    public void remover(Long codigo) {
+        System.out.println("=>>>" + codigo);
+    }
 
  @GetMapping("/cadastrar")
  public String abrirCadastro(Model model){

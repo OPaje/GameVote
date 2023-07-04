@@ -15,17 +15,17 @@ public class JogoService {
     @Autowired
     private JogoRepository jogoRepository;
 
-    public void votar(Long jogoId, Usuario usuario) {
+    public void votar(Long jogoId, String name) {
         Optional<Jogo> optionalJogo = jogoRepository.findById(jogoId);
         if (optionalJogo.isPresent()) {
             Jogo jogo = optionalJogo.get();
-            if (jogo.getVotos().contains(usuario)) {
-                throw new IllegalStateException("Usuário já votou neste jogo.");
-            } else {
-                jogo.getVotos().add(usuario);
+           // if (jogo.getVotos().contains(usuario)) {
+               // throw new IllegalStateException("Usuário já votou neste jogo.");
+           // } else {
+                //jogo.getVotos().add(usuario);
                // usuario.getJogosVotados().add(jogo);
-                jogoRepository.save(jogo);
-            }
+              //jogoRepository.save(jogo);
+          //  }
         } else {
             throw new IllegalArgumentException("Jogo não encontrado.");
         }

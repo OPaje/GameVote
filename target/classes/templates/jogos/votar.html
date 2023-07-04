@@ -23,7 +23,8 @@
         </div>
         <div th:replace="~{layout/fragments/paginacao :: coluna(${pagina}, 'nome', 'Nome', '')}"></div>
         <th scope="col">Descrição</th>
-        <th scope="col">Quantidade votos</th>
+        <th scope="col">Votos</th>
+        <th scope="col">Votação</th>
       </tr>
 
       <tr th:each="jogo : ${pagina.conteudo}">
@@ -31,7 +32,17 @@
         <td th:text="${jogo.nome}"></td>
         <td th:text="${jogo.descricao}"></td>
         <td th:text="${jogo.quantidadeVotos != null ? jogo.quantidadeVotos : '0'}"></td>
+        <td class="d-flex justify-content-start ">
+    
+          <form th:action="@{/jogos/votar}" method="POST">
+            <input type="hidden" name="codigo" th:value="${jogo.codigo}">
+            <button type="submit" class="btn btn-danger confirmacao">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </form>
+        </td>
       </tr>
+    
 
     </table>
 
