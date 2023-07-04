@@ -2,7 +2,10 @@ package web.gamevote.controller;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +20,7 @@ import web.gamevote.ajax.NotificacaoAlertify;
 import web.gamevote.ajax.TipoNotificaoAlertify;
 import web.gamevote.model.Jogo;
 import web.gamevote.model.JogosVotosDTO;
+import web.gamevote.model.JogosVotosSemPlataformaDTO;
 import web.gamevote.model.Plataforma;
 import web.gamevote.model.Status;
 import web.gamevote.model.Usuario;
@@ -91,7 +95,9 @@ public class VotoController {
     public String mostraRanking(String nome, Model model){
 
         List<JogosVotosDTO> jogos = votoService.obterQuantidadeVotosPorJogo();
+        //List<JogosVotosSemPlataformaDTO> jogosSemPlataforma = votoService.obterQuantidadeVotosJogosSemPlataforma();
         List<JogosVotosDTO> jogosComVotosPorPlataforma = new ArrayList<>();
+        Set<JogosVotosDTO> jogosSemPlataforma = new LinkedHashSet<>(jogos);
 
         if(!nome.isEmpty()){
             for (JogosVotosDTO jogo : jogos) {
@@ -99,9 +105,12 @@ public class VotoController {
                     jogosComVotosPorPlataforma.add(jogo);
                 }
             }
+            model.addAttribute("jogos", jogosComVotosPorPlataforma);
+        }else{
+            
+            model.addAttribute("jogos", jogosSemPlataforma);
         }
 
-        model.addAttribute("jogos", jogosComVotosPorPlataforma);
         return "ranking/mostraranking";
 
     }

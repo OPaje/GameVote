@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import web.gamevote.model.JogosVotosDTO;
+import web.gamevote.model.JogosVotosSemPlataformaDTO;
 import web.gamevote.model.Voto;
 import web.gamevote.repository.VotoRepository;
 
@@ -40,4 +41,21 @@ public class VotoService {
 
         return listaJogos;
     }
+
+    /* public List<JogosVotosSemPlataformaDTO> obterQuantidadeVotosJogosSemPlataforma() {
+
+        List<Object[]> listaConsulta = votoRepository.obterQuantidadeVotosJogos();
+        List<JogosVotosSemPlataformaDTO> listaJogos = new ArrayList<>();
+
+        for (Object[] resultado : listaConsulta) {
+            String nome = (String) resultado[0];
+            Long quantidade = (Long) resultado[1];
+            JogosVotosSemPlataformaDTO dto = new JogosVotosSemPlataformaDTO();
+            dto.setNome(nome);
+            dto.setQuantidade(quantidade);
+            listaJogos.add(dto);
+        }
+
+        return listaJogos;
+    } */
 }
