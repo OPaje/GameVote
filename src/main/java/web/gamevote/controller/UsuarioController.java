@@ -25,59 +25,54 @@ import web.gamevote.service.CadastroUsuarioService;
 @Controller
 @RequestMapping("/usuarios")
 public class UsuarioController {
-    
-    private static final Logger logger = LoggerFactory.getLogger(UsuarioController.class);
 
-    @Autowired
-    private CadastroUsuarioService cadastroUsuarioService;
+	private static final Logger logger = LoggerFactory.getLogger(UsuarioController.class);
 
-    @Autowired
-    private PapelRepository papelRepository;
-
-    @Autowired
+	@Autowired
+	private PapelRepository papelRepository;
+	
+	@Autowired
+	private CadastroUsuarioService cadastroUsuarioService;
+	
+	@Autowired
 	private PasswordEncoder passwordEncoder;
+	
+	@GetMapping("/cadastrar")
+	public String abrirCadastroUsuario(Usuario usuario, Model model) {
 
-
-    @GetMapping("/cadastrar")
-    public String abrirCadastroUsuario(Usuario usuario, Model model){
-        
-        List<Papel> papeis = papelRepository.findAll();
-        model.addAttribute("todosPapeis", papeis);
-
-        return "usuario/cadastrar";
-    }
-
-    @PostMapping("/cadastrar")
-    public String cadastrar(@Valid Usuario usuario, BindingResult resultado, Model model){
-
-        if(resultado.hasErrors()){
-            logger.info("O usuario recebido para cadastrar não é válido.");
+		List<Papel> papeis = papelRepository.findAll();
+		model.addAttribute("todosPapeis", papeis);
+		
+		return "usuario/cadastrar";
+	}
+	
+	@PostMapping("/cadastrar")
+	public String cadastrarNovoUsuario(@Valid Usuario usuario, BindingResult resultado, Model model) {
+		if (resultado.hasErrors()) {
+			logger.info("O usuario recebido para cadastrar não é válido.");
 			logger.info("Erros encontrados:");
 			for (FieldError erro : resultado.getFieldErrors()) {
 				logger.info("{}", erro);
 			}
-
-            List<Papel>papeis = papelRepository.findAll();
-            model.addAttribute("todosPapeis", papeis);
-            return "usuario/cadastrar";
-        }else{
-            
-            usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
-            cadastroUsuarioService.salvar(usuario);
-            return "redirect:/usuarios/cadastrosucesso";
-        }
-
-    }
-
-    @GetMapping("/cadastrosucesso")
-    public String mostrarCadastroSucesso(Usuario usuario, Model model){
-        List<Papel> papeis = papelRepository.findAll();
+			List<Papel> papeis = papelRepository.findAll();
+			model.addAttribute("todosPapeis", papeis);
+			return "usuario/cadastrar";
+		} else {
+			usuario.setAtivo(true);
+			usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+			cadastroUsuarioService.salvar(usuario);
+			return "redirect:/usuarios/cadastrosucesso";
+		} 
+	}
+	
+	@GetMapping("/cadastrosucesso")
+	public String mostrarCadastroSucesso(Usuario usuario, Model model) {
+		List<Papel> papeis = papelRepository.findAll();
 		model.addAttribute("todosPapeis", papeis);
 		NotificacaoAlertify notificacao = 
 				new NotificacaoAlertify("Cadastro de usuário efetuado com sucesso.",
 						                TipoNotificaoAlertify.SUCESSO);
 		model.addAttribute("notificacao", notificacao);
 		return "usuario/cadastrar";
-    }
-
+	}
 }

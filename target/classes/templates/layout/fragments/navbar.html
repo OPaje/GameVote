@@ -11,21 +11,10 @@
 			<!-- !offcanvas sidebar trigger -->
 
 			<!-- titulo da aplicacao -->
-			<a class="navbar-brand fw-bold text-uppercase me-auto" th:href="@{/}">GameVote</a>
+			<a class="navbar-brand fw-bold text-uppercase me-auto" th:href="@{/}">GAMEVOTE</a>
 
 			<!-- parte da direita -->
 			<div class="d-flex justify-content-end align-items-center">
-                
-                <div sec:authorize="isAuthenticated()" class="pe-1">
-					<!-- Nome do mano -->
-					<div class="ms-3 d-none d-sm-block">
-						<a th:href="" class="navbar-brand">
-							<span sec:authentication="principal.nome" class="navbar-text text-white">
-								<i class="bi bi-person-fill ms-2">ada</i>
-							</span>
-						</a>
-					</div>
-				</div>
 
 				<div sec:authorize="!isAuthenticated()">
 					<!-- botao login -->

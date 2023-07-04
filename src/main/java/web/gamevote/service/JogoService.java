@@ -23,7 +23,7 @@ public class JogoService {
                 throw new IllegalStateException("Usuário já votou neste jogo.");
             } else {
                 jogo.getVotos().add(usuario);
-                usuario.getJogosVotados().add(jogo);
+               // usuario.getJogosVotados().add(jogo);
                 jogoRepository.save(jogo);
             }
         } else {
