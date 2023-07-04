@@ -32,11 +32,9 @@
 					<input type="text" id="dataNascimento" th:field="*{dataNascimento}" class="form-control mb-4 componentedata" th:errorclass="is-invalid">
 					<span class="invalid-feedback" th:if="${#fields.hasErrors('dataNascimento')}" th:each="erro : ${#fields.errors('dataNascimento')}" th:text="${erro} + '. '"></span>
 					<label for="papel" class="form-label mt-3">Papel</label>
-					<select id="papel" name="papel" class="form-select" th:errorclass="is-invalid">
-						<option th:each="papel : ${todosPapeis}" th:value="${papel.codigo}" 
-						                                      th:text="${papel.nome}"
-									th:selected="${papel.codigo} == *{papel?.codigo}"></option>
-					</select>
+					<div th:each="papel: ${todosPapeis}" class="form-check">
+						<label th:text="${papel.nome}" class="form-check-label">Texto checkbox 1</label>
+					</div>
 					<input type="submit" value="Cadastrar" class="btn btn-primary mt-4">
 				</form>
 				

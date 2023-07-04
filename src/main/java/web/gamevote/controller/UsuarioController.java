@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -33,6 +34,9 @@ public class UsuarioController {
     @Autowired
     private PapelRepository papelRepository;
 
+    @Autowired
+	private PasswordEncoder passwordEncoder;
+
 
     @GetMapping("/cadastrar")
     public String abrirCadastroUsuario(Usuario usuario, Model model){
@@ -57,7 +61,8 @@ public class UsuarioController {
             model.addAttribute("todosPapeis", papeis);
             return "usuario/cadastrar";
         }else{
-
+            
+            usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
             cadastroUsuarioService.salvar(usuario);
             return "redirect:/usuarios/cadastrosucesso";
         }

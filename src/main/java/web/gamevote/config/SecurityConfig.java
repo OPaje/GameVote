@@ -24,10 +24,10 @@ public class SecurityConfig {
 		http
 			.authorizeHttpRequests(configurer -> configurer
 
-				.requestMatchers("/css/**", "/js/**", "/images/**", "/login", "/cadastrar").permitAll()
+				.requestMatchers("/css/**", "/js/**", "/images/**", "/login", "usuarios/cadastrar").permitAll()
 				.requestMatchers("/", "/index.html").hasRole("COMUM, ADMIN")
                 .requestMatchers("/jogos/cadastrar").hasRole("ADMIN")
-				.requestMatchers("/usuarios/cadastrar").hasRole("ADMIN")
+				//.requestMatchers("/usuarios/cadastrar").hasRole("ADMIN")
 				
 				.anyRequest().permitAll()
 			)
@@ -51,12 +51,12 @@ public class SecurityConfig {
 		JdbcUserDetailsManager manager = new JdbcUserDetailsManager(dataSource);
 		manager.setUsersByUsernameQuery("select nome_usuario, senha "
 			  						+ "from usuario "
-			  						+ "where nome = ?");
+			  						+ "where nome_usuario = ?");
 		manager.setAuthoritiesByUsernameQuery(
 			  "SELECT usuario.nome_usuario , papel.nome FROM"
-			+ "(SELECT usuario.nome_usuario , usuario.codigo FROM usuario WHERE nome_usuario = ?) as usuario "
-			+ " INNER JOIN usuario_papel ON codigo_usuario = usuario.codigo "
-			+ " INNER JOIN papel ON codigo_papel = papel.codigo;");
+			+ "(SELECT usuario.nome_usuario , usuario.codigo FROM usuario WHERE nome_usuario = ?) as tab "
+			+ " INNER JOIN usuario_papel ON codigo_usuario = tab.codigo "
+			+ " INNER JOIN papel ON codigo = papel.codigo;");
 		return manager;
 	}
 
