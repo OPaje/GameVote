@@ -16,20 +16,22 @@
 				<h1>Cadastro de Voto</h1>
 
 				<form th:action="@{/votos/cadastrar}" method="post" th:object="${voto}">
-					<label for="nomeUsuario" class="form-label mt-3">Nome de usuário:</label>
-					<select id="usuario" name="usuario" class="form-select" th:errorclass="is-invalid">
-						<option th:each="usuario : ${usuarios}" th:value="${usuario.codigo}" 
-						                                      th:text="${usuario.nomeUsuario}"
-									th:selected="${usuario.codigo} == *{usuario?.codigo}"></option>
-					</select>
+					<div sec:authorize="isAuthenticated()">
+						<!-- nome do usuario -->
+						<div class="ms-3 d-none d-sm-block">
+							<a class="navbar-brand" href="#">
+								<spam>Olá, <h1 sec:authentication="principal.username" class="navbar-text">
+								</h1></spam> 
+							</a>
+						</div>
+					</div>
 
+					<input type="hidden" name="username" th:value="${#authentication.principal.username}">
 					<label for="jogo" class="form-label mt-3">Jogos</label>
-					<select id="jogo" name="jogo" class="form-select" th:errorclass="is-invalid">
-						<option th:each="jogo : ${jogos}" th:value="${jogo.codigo}" 
-						                                      th:text="${jogo.nome}"
-									th:selected="${jogo.codigo} == *{jogo?.codigo}"></option>
+					<select id="jogo" name="codigo" class="form-select" th:errorclass="is-invalid">
+						<option th:each="jogo : ${jogos}" th:value="${jogo.codigo}" th:text="${jogo.nome}"
+								th:selected="${jogo.codigo} == *{jogo?.codigo}"></option>
 					</select>
-
 					<input type="submit" value="Votar" class="btn btn-primary mt-4">
 				</form>
 				

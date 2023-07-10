@@ -36,8 +36,8 @@
     
           <form th:action="@{/jogos/votar}" method="POST">
             <input type="hidden" name="codigo" th:value="${jogo.codigo}">
-            <button type="submit" class="btn btn-danger confirmacao">
-              <i class="bi bi-trash-fill"></i>
+            <button type="submit" class="btn btn-warning">
+              Votar <i class="bi bi-star"></i>
             </button>
           </form>
         </td>

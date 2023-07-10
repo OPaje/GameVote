@@ -60,8 +60,8 @@ public class JogoController {
  }
 
   @PostMapping("/votar")
-    public void remover(Long codigo) {
-        System.out.println("=>>>" + codigo);
+    public void remover() {
+        System.out.println("=>>> teste");
     }
 
  @GetMapping("/cadastrar")
